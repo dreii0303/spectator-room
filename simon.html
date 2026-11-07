@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simon Says — watch the pattern, repeat it, and see how many rounds your memory can survive.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Simon Says — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="simon">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 12 // MEMORY CIRCUIT</p>
+        <h1>Simon Says</h1>
+        <p class="game-sub">Watch the pads light up. Repeat the pattern. Every round adds one more step and one more chance to forget.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">PATTERN MEMORY</span>
+        <span class="badge">NO BET REQUIRED</span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel simon-panel">
+        <div class="game-hud simon-hud" aria-live="off">
+          <div><span id="simon-round">0</span><small>ROUND</small></div>
+          <div><span id="simon-length">3</span><small>SEQUENCE</small></div>
+          <div><span id="simon-best">0</span><small>BEST ROUNDS</small></div>
+          <div><span id="simon-state">IDLE</span><small>STATUS</small></div>
+        </div>
+
+        <div class="simon-stage" id="simon-stage">
+          <div class="simon-board" id="simon-board">
+            <button class="simon-pad simon-pad--green" type="button" data-pad="0" aria-label="Green pad" disabled></button>
+            <button class="simon-pad simon-pad--red" type="button" data-pad="1" aria-label="Red pad" disabled></button>
+            <button class="simon-pad simon-pad--gold" type="button" data-pad="2" aria-label="Gold pad" disabled></button>
+            <button class="simon-pad simon-pad--cyan" type="button" data-pad="3" aria-label="Cyan pad" disabled></button>
+          </div>
+
+          <p class="simon-status" id="simon-status" aria-live="polite">Press start to watch the pattern.</p>
+
+          <div class="aim-overlay" id="simon-overlay">
+            <p class="eyebrow">MEMORY CIRCUIT</p>
+            <h2 id="simon-title">Watch. Repeat. Survive.</h2>
+            <p id="simon-message">
+              The pattern starts at three pads and grows by one each round.
+              Repeat it correctly to bank another round. One wrong pad ends the run.
+            </p>
+
+            <div class="aim-result" id="simon-result" hidden>
+              <div><span id="simon-r-rounds">0</span><small>ROUNDS</small></div>
+              <div><span id="simon-r-length">3</span><small>SEQUENCE</small></div>
+              <div><span id="simon-r-points">0</span><small>POINTS</small></div>
+            </div>
+
+            <p class="aim-payout" id="simon-payout" hidden>+0 points</p>
+
+            <button class="btn btn-primary" id="simon-start" type="button">START RUN</button>
+          </div>
+        </div>
+
+        <p class="microcopy aim-tip">Pads are locked while the pattern plays. Watch first, then repeat.</p>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">Scoring</h2>
+        <p>Each completed round is worth <strong>25 points</strong>.</p>
+        <p>Complete five rounds in one run for a <strong>+50 point</strong> clean-memory bonus.</p>
+        <p>The sequence keeps growing, so every round is worth the same but much harder to reach.</p>
+
+        <div class="divider"></div>
+
+        <h3>How to play</h3>
+        <p>Press <strong>Start Run</strong>. Four pads will light up in order. When the board unlocks, click or tap them in the same order.</p>
+        <p>Repeat the full sequence to advance. The next pattern adds one step. A single wrong pad ends the run.</p>
+        <p>Each pad has its own tone, so you can play it by ear as well as by sight.</p>
+
+        <p class="fine-print">Play money only. No real gambling.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/simon.js"></script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spectator Room — a play-money arcade for the respawn timer. Slots, crash, blackjack, and quick skill games.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Spectator Room — The Respawn-Timer Arcade</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <header id="site-header"></header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> THE RESPAWN-TIMER ARCADE</p>
+        <h1 class="hero-title">DIE IN GAME.<br><span class="text-red">WIN</span> IN HERE.</h1>
+        <p class="hero-lede">
+          Twelve fast, dumb, beautiful distractions for the thirty seconds before the next round.
+          One shared balance. No downloads. No real money. Just the sweet sound of a jackpot
+          while your team flames you in voice chat.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="slots.html">
+            SPIN THE SLOTS <span aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn-ghost" href="#games">BROWSE ALL 12</a>
+        </div>
+
+        <div class="hero-stats" aria-label="Your play stats">
+          <div class="hero-stat">
+            <span class="hero-stat-value" data-balance>1,000</span>
+            <span class="hero-stat-label">BALANCE</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" data-stat="gamesPlayed">0</span>
+            <span class="hero-stat-label">ROUNDS</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" data-stat="biggestWin">0</span>
+            <span class="hero-stat-label">BIGGEST WIN</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" data-stat="achievements">0/14</span>
+            <span class="hero-stat-label">BADGES</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-halo"></div>
+        <div class="mini-machine">
+          <div class="mini-top">
+            <span>SPECTATOR SLOTS</span>
+            <span class="mini-lights"><i></i><i></i><i></i></span>
+          </div>
+          <div class="mini-reels">
+            <div class="mini-reel">🍒</div>
+            <div class="mini-reel">7️⃣</div>
+            <div class="mini-reel">💎</div>
+          </div>
+          <div class="mini-jackpot">
+            <span>JACKPOT</span>
+            <strong data-jackpot>1,000</strong>
+          </div>
+          <div class="mini-footer">
+            <span>PLAY MONEY</span>
+            <span>100% STYLE</span>
+          </div>
+        </div>
+        <div class="floating-chip floating-chip--red">+250</div>
+        <div class="floating-chip floating-chip--cyan">7 × 7 × 7</div>
+        <div class="floating-chip floating-chip--gold">JACKPOT</div>
+      </div>
+    </section>
+
+    <!-- ================= TICKER ================= -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>PLAY MONEY ONLY</span><span>NO REAL GAMBLING</span><span>ONE BALANCE</span>
+        <span>TWELVE GAMES</span><span>ZERO DOWNLOADS</span><span>RESPAWN IN 3… 2… 1…</span>
+        <span>PLAY MONEY ONLY</span><span>NO REAL GAMBLING</span><span>ONE BALANCE</span>
+        <span>TWELVE GAMES</span><span>ZERO DOWNLOADS</span><span>RESPAWN IN 3… 2… 1…</span>
+      </div>
+    </div>
+
+    <!-- ================= GAME GRID ================= -->
+    <section class="game-section wrap" id="games">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CHOOSE YOUR DISTRACTION</p>
+          <h2>The arcade</h2>
+        </div>
+        <p class="section-note">Every game feeds the same balance. Start with 1,000 points.</p>
+      </div>
+
+      <div class="game-grid">
+        <a class="game-card game-card--featured" href="slots.html" style="--card-accent: #ffd166;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <rect x="2.5" y="3.5" width="19" height="17" rx="2" />
+                <path d="M7.5 3.5v17M16.5 3.5v17" />
+                <path d="M4.8 8.5h1M9.8 8.5h1M18.8 8.5h1" />
+                <path d="m11 13 1.5-1.5V16M13 16h-1.5" />
+              </svg>
+            </span>
+            <span class="game-number">01</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">MAIN EVENT</span>
+            <h3>Slot Machine</h3>
+            <p>Three reels, weighted chaos, and a jackpot that grows with every spin.</p>
+          </div>
+          <span class="game-card-cta">PULL THE LEVER <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="game-card" href="coinflip.html" style="--card-accent: #6ff7ff;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <circle cx="12" cy="12" r="8.5" />
+                <path d="M9.5 9.2c0-1.2 1.1-2.2 2.5-2.2s2.5 1 2.5 2.2c0 1.7-2.5 2-2.5 3.8M12 17.2h.01" />
+              </svg>
+            </span>
+            <span class="game-number">02</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">QUICK DRAW</span>
+            <h3>Coin Flip</h3>
+            <p>Heads or tails. Double or nothing. Try not to build a streak you can't protect.</p>
+          </div>
+          <span class="game-card-cta">CALL IT <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="game-card" href="crash.html" style="--card-accent: #5cffb1;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path d="M3 19 8 13l4 3 7-9" />
+                <path d="M14 7h5v5" />
+                <path d="M3 21h18" />
+              </svg>
+            </span>
+            <span class="game-number">03</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">NERVE CHECK</span>
+            <h3>Crash</h3>
+            <p>Watch the multiplier climb. Cash out before the line goes red. Greed is a strategy.</p>
+          </div>
+          <span class="game-card-cta">LAUNCH <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="game-card" href="blackjack.html" style="--card-accent: #ff3b4e;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <rect x="3" y="5" width="11" height="15" rx="1.5" />
+                <path d="M10 2.8h9.5A1.5 1.5 0 0 1 21 4.3v12.2a1.5 1.5 0 0 1-1.5 1.5H16" />
+                <path d="M8.5 9.5v6M5.5 12.5h6" />
+              </svg>
+            </span>
+            <span class="game-number">04</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">TABLE GAME</span>
+            <h3>Blackjack</h3>
+            <p>Hit, stand, or double. Blackjack pays 3:2. The dealer is not your friend.</p>
+          </div>
+          <span class="game-card-cta">TAKE A SEAT <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="game-card" href="aim.html" style="--card-accent: #a78bfa;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <circle cx="12" cy="12" r="7.5" />
+                <circle cx="12" cy="12" r="2.5" />
+                <path d="M12 1.5v4M12 18.5v4M1.5 12h4M18.5 12h4" />
+              </svg>
+            </span>
+            <span class="game-number">05</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">SKILL SHOT</span>
+            <h3>Aim Trainer</h3>
+            <p>30 seconds of targets. Score points for hits, accuracy, and reaction speed.</p>
+          </div>
+          <span class="game-card-cta">TAKE THE SHOT <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="game-card" href="reaction.html" style="--card-accent: #ffd166;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path d="M13 2 4.5 13H11l-1 9 9-12h-6.5L13 2Z" />
+              </svg>
+            </span>
+            <span class="game-number">06</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">REFLEX TEST</span>
+            <h3>Reaction Timer</h3>
+            <p>Wait for green. Click fast. Find out whether your reflexes are carrying the team.</p>
+          </div>
+          <span class="game-card-cta">TEST YOURSELF <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="game-card" href="memory.html" style="--card-accent: #6ff7ff;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <rect x="3" y="3" width="7.5" height="7.5" rx="1" />
+                <rect x="13.5" y="3" width="7.5" height="7.5" rx="1" />
+                <rect x="3" y="13.5" width="7.5" height="7.5" rx="1" />
+                <path d="M17.2 13.5v7.5M13.5 17.2H21" />
+              </svg>
+            </span>
+            <span class="game-number">07</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">BRAIN GAME</span>
+            <h3>Memory Match</h3>
+            <p>Eight pairs, sixteen cards. Finish fast and clean for the biggest point bonus.</p>
+          </div>
+          <span class="game-card-cta">FLIP CARDS <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="game-card" href="cps.html" style="--card-accent: #ff3b4e;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <rect x="7" y="2.5" width="10" height="19" rx="4" />
+                <path d="M12 2.5v6" />
+                <path d="M9.5 12h5" />
+              </svg>
+            </span>
+            <span class="game-number">08</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">HANDS ON</span>
+            <h3>Click Speed Test</h3>
+            <p>Ten seconds. Maximum clicks. Convert your questionable wrist health into points.</p>
+          </div>
+          <span class="game-card-cta">START CLICKING <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="game-card" href="dice.html" style="--card-accent: #ffd166;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="3" />
+                <circle cx="8" cy="8" r="1.2" fill="currentColor" />
+                <circle cx="16" cy="8" r="1.2" fill="currentColor" />
+                <circle cx="12" cy="12" r="1.2" fill="currentColor" />
+                <circle cx="8" cy="16" r="1.2" fill="currentColor" />
+                <circle cx="16" cy="16" r="1.2" fill="currentColor" />
+              </svg>
+            </span>
+            <span class="game-number">09</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">DICE TABLE</span>
+            <h3>Dice Duel</h3>
+            <p>Under, over, or exactly seven. Two dice and one very confident guess.</p>
+          </div>
+          <span class="game-card-cta">ROLL THEM <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="game-card" href="mines.html" style="--card-accent: #ff3b4e;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <circle cx="12" cy="13" r="6.5" />
+                <path d="M12 6.5V3M9.5 3h5M18 8l2.5-2M6 8 3.5 6M18.5 13H22M2 13h2.5" />
+                <path d="M9.5 11.5h.01M14.5 11.5h.01M10 15.5c1.2.8 2.8.8 4 0" />
+              </svg>
+            </span>
+            <span class="game-number">10</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">RISK GRID</span>
+            <h3>Mines</h3>
+            <p>Find gems, dodge five mines, and decide when to cash out before the board turns.</p>
+          </div>
+          <span class="game-card-cta">SWEEP THE GRID <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="game-card" href="whack.html" style="--card-accent: #5cffb1;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path d="M4 20c0-3 2.5-5 5-5h6c2.5 0 5 2 5 5" />
+                <circle cx="12" cy="8" r="5" />
+                <path d="M9.5 7h.01M14.5 7h.01M10 10c1.2.8 2.8.8 4 0" />
+              </svg>
+            </span>
+            <span class="game-number">11</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">REFLEX GARDEN</span>
+            <h3>Whack-a-Mole</h3>
+            <p>Thirty seconds, nine holes, one rude mole. Build a combo and cash in your reflexes.</p>
+          </div>
+          <span class="game-card-cta">START WHACKING <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="game-card" href="simon.html" style="--card-accent: #6ff7ff;">
+          <div class="game-card-top">
+            <span class="game-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <circle cx="8" cy="8" r="4.5" />
+                <circle cx="16" cy="8" r="4.5" />
+                <circle cx="8" cy="16" r="4.5" />
+                <circle cx="16" cy="16" r="4.5" />
+              </svg>
+            </span>
+            <span class="game-number">12</span>
+          </div>
+          <div class="game-card-body">
+            <span class="game-tag">MEMORY CIRCUIT</span>
+            <h3>Simon Says</h3>
+            <p>Watch the pattern, repeat it back, and survive one more round. Easy. Until it isn't.</p>
+          </div>
+          <span class="game-card-cta">FOLLOW THE LIGHTS <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= INFO STRIP ================= -->
+    <section class="info-strip wrap">
+      <div class="info-card">
+        <span class="info-index">01</span>
+        <h3>One balance</h3>
+        <p>Win in slots, lose it in crash, rebuild it in the aim trainer. Everything shares one wallet.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-index">02</span>
+        <h3>No installs</h3>
+        <p>Plain HTML, CSS and JavaScript. It loads instantly and works with your progress saved locally.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-index">03</span>
+        <h3>No real money</h3>
+        <p>Every point is fictional. There is nothing to buy, nothing to cash out, and nothing to regret.</p>
+      </div>
+    </section>
+
+    <!-- ================= CREDITS ================= -->
+    <section class="credits wrap" aria-labelledby="credits-title">
+      <div class="credits-head">
+        <div>
+          <p class="eyebrow">THE PEOPLE BEHIND THE RESPAWN</p>
+          <h2 id="credits-title">Credits</h2>
+        </div>
+        <p>A tiny arcade built for the gap between rounds. No frameworks, no trackers, no real money.</p>
+      </div>
+
+      <div class="credits-grid">
+        <div class="credit-card">
+          <span class="credit-index">01</span>
+          <h3>Design &amp; code</h3>
+          <p>Gindreiy Adona</p>
+        </div>
+        <div class="credit-card">
+          <span class="credit-index">02</span>
+          <h3>Built with</h3>
+          <p>Plain HTML, CSS and vanilla JavaScript. One shared balance, zero dependencies.</p>
+        </div>
+        <div class="credit-card">
+          <span class="credit-index">03</span>
+          <h3>Sound</h3>
+          <p>Every effect is synthesized live with the Web Audio API. No audio files were harmed.</p>
+        </div>
+        <div class="credit-card">
+          <span class="credit-index">04</span>
+          <h3>Special thanks</h3>
+          <p>Everyone who queues “one more round” while the respawn timer runs out.</p>
+        </div>
+      </div>
+
+      <p class="credits-note">© 2026 Spectator Room · Play money only · No real gambling</p>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+</body>
+</html>

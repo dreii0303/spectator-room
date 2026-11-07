@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aim Trainer — 30 seconds of targets. Turn accuracy and reaction speed into play-money points.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Aim Trainer — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="aim">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 05 // SKILL SHOT</p>
+        <h1>Aim Trainer</h1>
+        <p class="game-sub">Thirty seconds. As many targets as you can hit. Your score converts straight into points.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">DURATION <strong>30s</strong></span>
+        <span class="badge">BONUS <strong>ACCURACY + SPEED</strong></span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel aim-panel">
+        <div class="game-hud" aria-live="off">
+          <div><span id="aim-time">30.0</span><small>TIME LEFT</small></div>
+          <div><span id="aim-hits">0</span><small>HITS</small></div>
+          <div><span id="aim-acc">0%</span><small>ACCURACY</small></div>
+          <div><span id="aim-react">—</span><small>AVG REACTION</small></div>
+        </div>
+
+        <div class="aim-arena" id="aim-arena">
+          <div class="aim-overlay" id="aim-overlay">
+            <p class="eyebrow">30-SECOND RUN</p>
+            <h2 id="aim-title">Click the targets. Fast.</h2>
+            <p id="aim-message">
+              Every hit is worth 4 points. Accuracy and reaction speed add bonuses.
+              Targets move on their own — keep your cursor ready.
+            </p>
+
+            <div class="aim-result" id="aim-result" hidden>
+              <div><span id="aim-r-hits">0</span><small>HITS</small></div>
+              <div><span id="aim-r-acc">0%</span><small>ACCURACY</small></div>
+              <div><span id="aim-r-react">—</span><small>AVG REACT</small></div>
+            </div>
+
+            <p class="aim-payout" id="aim-payout" hidden>+0 points</p>
+
+            <button class="btn btn-primary" id="aim-start" type="button">START RUN</button>
+          </div>
+        </div>
+
+        <p class="microcopy aim-tip">Click or tap inside the arena. Missing counts against your accuracy.</p>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">Scoring</h2>
+        <p><strong>Hits:</strong> 4 points each.</p>
+        <p><strong>Accuracy bonus:</strong> up to 100 points for hitting what you aim at.</p>
+        <p><strong>Speed bonus:</strong> up to 150 points for fast average reactions.</p>
+        <p>A clean, quick run can pay 300+ points. A panic-spam run pays a lot less.</p>
+
+        <div class="divider"></div>
+
+        <h3>How to play</h3>
+        <p>Press <strong>Start Run</strong> and click the purple targets for 30 seconds. Each hit spawns a new target somewhere else.</p>
+        <p>Targets you ignore will disappear and respawn. Clicking empty space still counts as a shot, so aim deliberately.</p>
+
+        <p class="fine-print">Play money only. No real gambling.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/aim.js"></script>
+</body>
+</html>

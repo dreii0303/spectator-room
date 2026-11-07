@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Memory Match — sixteen cards, eight pairs. Finish fast and clean to earn play-money points.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Memory Match — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="memory">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 07 // BRAIN GAME</p>
+        <h1>Memory Match</h1>
+        <p class="game-sub">Eight pairs, sixteen cards. Clear the board quickly and efficiently for the biggest point bonus.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">BASE <strong>50 PTS</strong></span>
+        <span class="badge">BONUS <strong>TIME + MOVES</strong></span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel memory-panel">
+        <div class="game-hud">
+          <div><span id="memory-moves">0</span><small>MOVES</small></div>
+          <div><span id="memory-time">0.0</span><small>TIME</small></div>
+          <div><span id="memory-pairs">0/8</span><small>PAIRS</small></div>
+        </div>
+
+        <div class="memory-stage">
+          <div class="memory-board" id="memory-board" aria-label="Memory board"></div>
+
+          <div class="memory-complete" id="memory-complete" hidden>
+            <p class="eyebrow">BOARD CLEARED</p>
+            <h2>Nice memory.</h2>
+            <p id="memory-result-text">You cleared the board.</p>
+            <p class="memory-points" id="memory-points">+0 points</p>
+            <button class="btn btn-primary" id="memory-again" type="button">PLAY AGAIN</button>
+          </div>
+        </div>
+
+        <div class="memory-actions">
+          <button class="btn btn-ghost" id="memory-restart" type="button">SHUFFLE &amp; RESTART</button>
+        </div>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">Scoring</h2>
+        <p><strong>Base:</strong> 50 points for clearing the board.</p>
+        <p><strong>Time bonus:</strong> up to 200 points. Every second costs you 5.</p>
+        <p><strong>Move bonus:</strong> up to 100 points for solving it in close to the minimum 8 moves.</p>
+        <p>Finish in <strong>25 seconds or less</strong> to unlock the <strong>Memory Ace</strong> achievement.</p>
+
+        <div class="divider"></div>
+
+        <h3>How to play</h3>
+        <p>Flip two cards at a time. Matching symbols stay face up. Non-matches flip back after a moment.</p>
+        <p>The timer starts on your first flip and stops when the last pair is matched.</p>
+
+        <p class="fine-print">Play money only. No real gambling.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/memory.js"></script>
+</body>
+</html>

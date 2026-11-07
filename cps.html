@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Click Speed Test — ten seconds of clicking. Turn your CPS into play-money points.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Click Speed Test — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cps">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 08 // HANDS ON</p>
+        <h1>Click Speed Test</h1>
+        <p class="game-sub">Ten seconds. Maximum clicks. Your clicks per second convert directly into points. No wrist damage refunds.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">DURATION <strong>10s</strong></span>
+        <span class="badge">8+ CPS <strong>BONUS 50</strong></span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel cps-panel">
+        <div class="game-hud">
+          <div><span id="cps-timer">10.00</span><small>TIME LEFT</small></div>
+          <div><span id="cps-count">0</span><small>CLICKS</small></div>
+          <div><span id="cps-live">0.0</span><small>CPS</small></div>
+        </div>
+
+        <div class="cps-progress" aria-hidden="true"><span id="cps-progress"></span></div>
+
+        <button class="cps-pad" id="cps-pad" type="button" aria-label="Click speed test pad. Click or press Space to start.">
+          <span class="cps-pad-label" id="cps-pad-label">START</span>
+          <span class="cps-pad-sub" id="cps-pad-sub">Click the pad or press Space. You have 10 seconds.</span>
+        </button>
+
+        <div class="cps-result" id="cps-result" aria-live="polite">
+          Ten seconds. Click as fast as you can.
+        </div>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">Scoring</h2>
+        <p>Points = <strong>CPS × 30</strong>, rounded to the nearest whole number.</p>
+        <p>Reach <strong>8 CPS</strong> or higher for an extra <strong>+50 points</strong>. The maximum payout is capped at 600.</p>
+        <p>Your first click starts the timer and counts. The test ends automatically after 10 seconds.</p>
+
+        <div class="divider"></div>
+
+        <h3>How to play</h3>
+        <p>Click the big pad or press <strong>Space</strong> repeatedly. Holding the key down does not count — you need a fresh press each time.</p>
+        <p>Reach 8 CPS to unlock the <strong>Speed Demon</strong> achievement.</p>
+
+        <p class="fine-print">Play money only. No real gambling.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/cps.js"></script>
+</body>
+</html>

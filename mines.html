@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mines — reveal gems on a 5×5 grid, dodge five mines, and cash out before your luck runs out.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Mines — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="mines">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 10 // RISK GRID</p>
+        <h1>Mines</h1>
+        <p class="game-sub">Twenty safe tiles. Five mines. Every gem raises the multiplier — cash out before you find the wrong square.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">25 TILES</span>
+        <span class="badge">5 MINES</span>
+        <span class="badge">CASH OUT ANY TIME</span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel mines-panel">
+        <div class="game-hud mines-hud" aria-live="off">
+          <div><span id="mines-gems">0</span><small>GEMS FOUND</small></div>
+          <div><span id="mines-multiplier">1.00×</span><small>CASHOUT</small></div>
+          <div><span id="mines-next">1.21×</span><small>NEXT GEM</small></div>
+        </div>
+
+        <div class="mines-board" id="mines-board" aria-label="Mines grid"></div>
+
+        <div class="bet-bar">
+          <div class="bet-field">
+            <span>BET</span>
+            <input id="mines-bet" type="number" min="10"  step="5" value="25" inputmode="numeric" aria-label="Bet amount">
+            <span class="pts">PTS</span>
+          </div>
+          <div class="bet-chips">
+            <button class="chip" type="button" data-mines-bet="10">10</button>
+            <button class="chip" type="button" data-mines-bet="25">25</button>
+            <button class="chip" type="button" data-mines-bet="50">50</button>
+            <button class="chip" type="button" data-mines-bet="100">100</button>
+            <button class="chip" type="button" data-mines-bet="max">MAX</button>
+          </div>
+        </div>
+
+        <div class="mines-actions">
+          <button class="btn btn-primary" id="mines-start" type="button">START ROUND</button>
+          <button class="btn btn-ghost" id="mines-cashout" type="button" disabled>CASH OUT</button>
+        </div>
+
+        <div class="dice-result mines-result" id="mines-result" aria-live="polite">
+          Set a bet and start a round. Your first safe tile pays 1.21×.
+        </div>
+
+        <div class="mini-stats">
+          <div><span id="mines-best">—</span><small>BEST CASHOUT</small></div>
+          <div><span id="mines-played">0</span><small>ROUNDS</small></div>
+          <div><span id="mines-last">—</span><small>LAST RESULT</small></div>
+        </div>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">How Mines works</h2>
+        <p>Every round hides <strong>five mines</strong> in a 5×5 grid. Reveal a safe tile to collect a gem and raise your cash-out multiplier.</p>
+        <p>You can cash out after the first gem. The payout is your bet multiplied by the current multiplier. Hit a mine and the bet is gone.</p>
+
+        <div class="divider"></div>
+
+        <h3>Multipliers</h3>
+        <p>The multiplier is based on the real odds of surviving that many picks, with a small house edge. More gems means a much bigger cash-out — and a much smaller chance of getting there.</p>
+        <p>Find all <strong>20 gems</strong> and the round cashes out automatically at the maximum multiplier.</p>
+
+        <p class="fine-print">Play money only. No real gambling.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/mines.js"></script>
+</body>
+</html>

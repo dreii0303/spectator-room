@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dice Duel — bet on under, over, or exactly seven with two play-money dice.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Dice Duel — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dice">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 09 // DICE TABLE</p>
+        <h1>Dice Duel</h1>
+        <p class="game-sub">Two dice. Three calls. Pick a side of seven, or call the exact number and get paid for the nerve.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">2 DICE</span>
+        <span class="badge">RTP ≈ 96%</span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel dice-panel">
+        <div class="dice-stage" id="dice-stage">
+          <div class="die" id="die-a" data-value="3" aria-hidden="true"></div>
+          <div class="die" id="die-b" data-value="4" aria-hidden="true"></div>
+          <div class="dice-total">
+            <span id="dice-total">7</span>
+            <small>TOTAL</small>
+          </div>
+        </div>
+
+        <div class="dice-choice" role="group" aria-label="Choose under, seven, or over">
+          <button class="choice-btn is-active" type="button" data-dice-choice="under">
+            <span>UNDER 7</span><small>2.3×</small>
+          </button>
+          <button class="choice-btn" type="button" data-dice-choice="seven">
+            <span>EXACTLY 7</span><small>5.8×</small>
+          </button>
+          <button class="choice-btn" type="button" data-dice-choice="over">
+            <span>OVER 7</span><small>2.3×</small>
+          </button>
+        </div>
+
+        <div class="bet-bar">
+          <div class="bet-field">
+            <span>BET</span>
+            <input id="dice-bet" type="number" min="10"  step="5" value="25" inputmode="numeric" aria-label="Bet amount">
+            <span class="pts">PTS</span>
+          </div>
+          <div class="bet-chips">
+            <button class="chip" type="button" data-dice-bet="10">10</button>
+            <button class="chip" type="button" data-dice-bet="25">25</button>
+            <button class="chip" type="button" data-dice-bet="50">50</button>
+            <button class="chip" type="button" data-dice-bet="100">100</button>
+            <button class="chip" type="button" data-dice-bet="max">MAX</button>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-wide dice-roll" id="dice-roll" type="button" style="margin-top: 14px;">
+          ROLL THE DICE
+        </button>
+
+        <div class="dice-result" id="dice-result" aria-live="polite">
+          Choose under, seven, or over, then roll. A winning under/over pays 2.3×; exactly seven pays 5.8×.
+        </div>
+
+        <div class="mini-stats">
+          <div><span id="dice-last">—</span><small>LAST ROLL</small></div>
+          <div><span id="dice-streak">0</span><small>WIN STREAK</small></div>
+          <div><span id="dice-history">—</span><small>RECENT</small></div>
+        </div>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">How the dice pay</h2>
+        <p>Two fair six-sided dice are rolled. The total is between <strong>2</strong> and <strong>12</strong>.</p>
+        <p><strong>Under 7</strong> wins on 2–6 and pays <strong>2.3×</strong>. <strong>Over 7</strong> wins on 8–12 and pays <strong>2.3×</strong>.</p>
+        <p><strong>Exactly 7</strong> wins on a seven and pays <strong>5.8×</strong>. The other two calls lose.</p>
+
+        <div class="divider"></div>
+
+        <h3>Why the payouts differ</h3>
+        <p>There are 36 possible rolls. Fifteen are under seven, fifteen are over seven, and six are exactly seven. The smaller chance pays more.</p>
+        <p>The payouts are tuned to a small house edge so the shared balance stays healthy. Every point is play money.</p>
+
+        <p class="fine-print">Play money only. No real gambling.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/dice.js"></script>
+</body>
+</html>

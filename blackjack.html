@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blackjack — hit, stand, or double down in a play-money six-deck shoe.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Blackjack — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="blackjack">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 04 // TABLE GAME</p>
+        <h1>Blackjack</h1>
+        <p class="game-sub">Hit, stand, or double. Get closer to 21 than the dealer without going over. Blackjack pays 3:2.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">BLACKJACK <strong>3:2</strong></span>
+        <span class="badge">DEALER STANDS ON <strong>17</strong></span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel blackjack-panel">
+        <div class="bj-table">
+          <div class="bj-row">
+            <div class="bj-label">DEALER <span id="bj-dealer-total"></span></div>
+            <div class="bj-hand" id="bj-dealer-hand" aria-label="Dealer hand"></div>
+          </div>
+
+          <div class="bj-center" id="bj-status" aria-live="polite">
+            Place your bet and deal. Dealer stands on all 17.
+          </div>
+
+          <div class="bj-row">
+            <div class="bj-label">YOU <span id="bj-player-total"></span></div>
+            <div class="bj-hand" id="bj-player-hand" aria-label="Your hand"></div>
+          </div>
+        </div>
+
+        <div class="bj-controls">
+          <div class="bet-bar">
+            <div class="bet-field">
+              <span>BET</span>
+              <input id="bj-bet" type="number" min="10"  step="5" value="25" inputmode="numeric" aria-label="Bet amount">
+              <span class="pts">PTS</span>
+            </div>
+            <div class="bet-chips">
+              <button class="chip" type="button" data-bj-bet="10">10</button>
+              <button class="chip" type="button" data-bj-bet="25">25</button>
+              <button class="chip" type="button" data-bj-bet="50">50</button>
+              <button class="chip" type="button" data-bj-bet="100">100</button>
+              <button class="chip" type="button" data-bj-bet="max">MAX</button>
+            </div>
+          </div>
+
+          <div class="bj-actions">
+            <button class="btn btn-primary" id="bj-deal" type="button">DEAL</button>
+            <button class="btn" id="bj-hit" type="button" disabled>HIT</button>
+            <button class="btn" id="bj-stand" type="button" disabled>STAND</button>
+            <button class="btn" id="bj-double" type="button" disabled>DOUBLE</button>
+          </div>
+
+          <p class="microcopy">
+            Six-deck shoe · Blackjack pays 3:2 · Dealer stands on all 17 ·
+            <span id="bj-shoe">312 cards</span>
+          </p>
+        </div>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">Table rules</h2>
+        <p><strong>Goal:</strong> beat the dealer's hand without going over 21. Number cards are their value, face cards are 10, and aces count as 1 or 11.</p>
+        <p><strong>Hit</strong> takes another card. <strong>Stand</strong> ends your turn. <strong>Double</strong> doubles your bet, deals one final card, and stands automatically.</p>
+        <p><strong>Blackjack</strong> is an ace plus a ten-value card on the first two cards. It pays <strong>3:2</strong>.</p>
+        <p>A push (equal totals) returns your bet. The dealer stands on all 17s.</p>
+
+        <div class="divider"></div>
+
+        <h3>Good to know</h3>
+        <p>You can only double on your first two cards, and only if your balance covers the extra bet.</p>
+        <p>The shoe is shuffled automatically when it runs low.</p>
+
+        <p class="fine-print">Play money only. No real gambling.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/blackjack.js"></script>
+</body>
+</html>

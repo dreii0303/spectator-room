@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reaction Timer — wait for green, click fast, and turn your reflexes into play-money points.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Reaction Timer — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="reaction">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 06 // REFLEX TEST</p>
+        <h1>Reaction Timer</h1>
+        <p class="game-sub">Wait for the screen to turn green, then click as fast as humanly possible. Faster reactions pay more.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">MAX PAYOUT <strong>200 PTS</strong></span>
+        <span class="badge">FALSE STARTS <strong>0 PTS</strong></span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel reaction-panel">
+        <div class="reaction-stage" id="reaction-stage" role="button" tabindex="0" aria-label="Reaction test. Click to start.">
+          <div class="reaction-content">
+            <span class="reaction-kicker" id="reaction-kicker">REACTION TEST</span>
+            <h2 id="reaction-text">Click to start</h2>
+            <p id="reaction-sub">Wait for green. Click as fast as you can. Space bar works too.</p>
+          </div>
+        </div>
+
+        <div class="reaction-history">
+          <div class="mini-stats">
+            <div><span id="reaction-best">—</span><small>BEST</small></div>
+            <div><span id="reaction-last">—</span><small>LAST</small></div>
+            <div><span id="reaction-avg">—</span><small>SESSION AVG</small></div>
+          </div>
+          <ul class="reaction-attempts" id="reaction-attempts" aria-label="Recent attempts"></ul>
+        </div>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">Scoring</h2>
+        <p><strong>150 ms or less:</strong> 200 points</p>
+        <p><strong>151–200 ms:</strong> 160 points</p>
+        <p><strong>201–250 ms:</strong> 120 points</p>
+        <p><strong>251–300 ms:</strong> 90 points</p>
+        <p><strong>301–400 ms:</strong> 60 points</p>
+        <p><strong>401–600 ms:</strong> 30 points</p>
+        <p><strong>Slower:</strong> 10 points</p>
+
+        <div class="divider"></div>
+
+        <h3>How to play</h3>
+        <p>Click the panel to arm the test. Wait for it to turn green, then click immediately. Clicking early is a false start and pays nothing.</p>
+        <p>React in under <strong>200 ms</strong> to unlock the <strong>Lightning</strong> achievement.</p>
+
+        <p class="fine-print">Play money only. No real gambling.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/reaction.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coin Flip — call heads or tails and double your play-money points.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Coin Flip — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="coinflip">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 02 // QUICK DRAW</p>
+        <h1>Coin Flip</h1>
+        <p class="game-sub">Pick a side. Call it in the air. Win and your bet doubles. Lose and it disappears. No in-between.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">50 / 50</span>
+        <span class="badge">PAYS <strong>2×</strong></span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel coin-panel">
+        <div class="coin-stage" id="coin-stage">
+          <div class="coin-wrap">
+            <div class="coin" id="coin">
+              <div class="coin-face coin-front" aria-hidden="true">H</div>
+              <div class="coin-face coin-back" aria-hidden="true">T</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="choice-row" role="group" aria-label="Choose heads or tails">
+          <button class="choice-btn is-active" type="button" data-choice="heads">HEADS</button>
+          <button class="choice-btn" type="button" data-choice="tails">TAILS</button>
+        </div>
+
+        <div class="bet-bar">
+          <div class="bet-field">
+            <span>BET</span>
+            <input id="coin-bet" type="number" min="10"  step="5" value="25" inputmode="numeric" aria-label="Bet amount">
+            <span class="pts">PTS</span>
+          </div>
+          <div class="bet-chips">
+            <button class="chip" type="button" data-coin-bet="10">10</button>
+            <button class="chip" type="button" data-coin-bet="25">25</button>
+            <button class="chip" type="button" data-coin-bet="50">50</button>
+            <button class="chip" type="button" data-coin-bet="100">100</button>
+            <button class="chip" type="button" data-coin-bet="max">MAX</button>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-wide" id="coin-flip" type="button" style="margin-top: 14px;">
+          FLIP — DOUBLE OR NOTHING
+        </button>
+
+        <div class="coin-result" id="coin-result" aria-live="polite">
+          Pick heads or tails, then flip. A win pays 2× your bet.
+        </div>
+
+        <div class="mini-stats">
+          <div><span id="coin-streak">0</span><small>STREAK</small></div>
+          <div><span id="coin-best">0</span><small>BEST STREAK</small></div>
+          <div><span id="coin-last">—</span><small>LAST FLIP</small></div>
+        </div>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">The rules</h2>
+        <p>Choose <strong>heads</strong> or <strong>tails</strong>, set a bet, and flip. The coin is a true 50/50.</p>
+        <p><strong>Win:</strong> you get 2× your bet back — your original stake plus the same amount in profit.</p>
+        <p><strong>Lose:</strong> the bet is gone.</p>
+        <p>There is no house edge on this one. It is pure double-or-nothing. Your streak resets after a loss.</p>
+
+        <div class="divider"></div>
+
+        <h3>Streak hunting</h3>
+        <p>Win five flips in a row to unlock <strong>On Fire</strong>. Your best streak is saved across sessions.</p>
+
+        <p class="fine-print">Play money only. No real gambling.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/coinflip.js"></script>
+</body>
+</html>

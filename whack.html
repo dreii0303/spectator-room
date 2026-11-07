@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Whack-a-Mole — thirty seconds of reaction testing. Hit the moles, build a combo, and earn play-money points.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Whack-a-Mole — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="whack">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 11 // REFLEX GARDEN</p>
+        <h1>Whack-a-Mole</h1>
+        <p class="game-sub">Thirty seconds. Nine holes. One very fast mole. Hit it before it ducks back down.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">DURATION <strong>30s</strong></span>
+        <span class="badge">COMBO BONUS</span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel whack-panel">
+        <div class="game-hud" aria-live="off">
+          <div><span id="whack-time">30.0</span><small>TIME LEFT</small></div>
+          <div><span id="whack-hits">0</span><small>HITS</small></div>
+          <div><span id="whack-acc">0%</span><small>ACCURACY</small></div>
+          <div><span id="whack-combo">0</span><small>COMBO</small></div>
+        </div>
+
+        <div class="whack-arena" id="whack-arena">
+          <div class="whack-grid" id="whack-grid"></div>
+
+          <div class="aim-overlay" id="whack-overlay">
+            <p class="eyebrow">30-SECOND RUN</p>
+            <h2 id="whack-title">Whack the moles.</h2>
+            <p id="whack-message">
+              Every hit is worth 6 points. Accuracy and your best combo add bonuses.
+              Click a hole with a mole in it — empty clicks cost accuracy.
+            </p>
+
+            <div class="aim-result" id="whack-result" hidden>
+              <div><span id="whack-r-hits">0</span><small>HITS</small></div>
+              <div><span id="whack-r-acc">0%</span><small>ACCURACY</small></div>
+              <div><span id="whack-r-combo">0</span><small>BEST COMBO</small></div>
+            </div>
+
+            <p class="aim-payout" id="whack-payout" hidden>+0 points</p>
+
+            <button class="btn btn-primary" id="whack-start" type="button">START RUN</button>
+          </div>
+        </div>
+
+        <p class="microcopy aim-tip">Tap or click a hole. A mole is only up for a moment.</p>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">Scoring</h2>
+        <p><strong>Hits:</strong> 6 points each.</p>
+        <p><strong>Accuracy bonus:</strong> up to 100 points for clicking the right holes.</p>
+        <p><strong>Combo bonus:</strong> 2 points per hit in your best uninterrupted streak.</p>
+        <p>A focused run can pay 250+ points. Panic-clicking pays much less.</p>
+
+        <div class="divider"></div>
+
+        <h3>How to play</h3>
+        <p>Press <strong>Start Run</strong>. A mole pops out of one of the nine holes. Click it before it disappears.</p>
+        <p>Missing a mole or clicking an empty hole resets your combo. The run lasts 30 seconds.</p>
+
+        <p class="fine-print">Play money only. No real gambling.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/whack.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spectator Room slots — three reels, weighted odds, and a growing play-money jackpot.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Slot Machine — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="slots">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 01 // THE MAIN EVENT</p>
+        <h1>Slot Machine</h1>
+        <p class="game-sub">Three reels, weighted chaos, and a jackpot pool fed by every spin. Triple 7s takes the whole thing.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">RTP ≈ 96%</span>
+        <span class="badge">JACKPOT <strong data-jackpot>1,000</strong></span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel slots-panel">
+        <div class="slot-header">
+          <span class="slot-brand">SPECTATOR SLOTS</span>
+          <span class="slot-jackpot">JACKPOT <strong data-jackpot>1,000</strong> PTS</span>
+        </div>
+
+        <div class="slot-machine" id="slot-machine">
+          <div class="slot-reels">
+            <div class="reel"><div class="reel-symbol">🍒</div></div>
+            <div class="reel"><div class="reel-symbol">🔔</div></div>
+            <div class="reel"><div class="reel-symbol">7️⃣</div></div>
+            <div class="payline" aria-hidden="true"></div>
+          </div>
+
+          <div class="slot-result" id="slot-result" aria-live="polite">
+            <span class="slot-result-label">READY</span>
+            <span class="slot-result-text">Set your bet and pull the lever.</span>
+          </div>
+        </div>
+
+        <div class="slot-controls">
+          <div class="slot-bet-row">
+            <div class="bet-field">
+              <span>BET</span>
+              <input id="slot-bet" type="number" min="10"  step="5" value="25" inputmode="numeric" aria-label="Bet amount">
+              <span class="pts">PTS</span>
+            </div>
+
+            <div class="bet-chips">
+              <button class="chip" type="button" data-slot-bet="10">10</button>
+              <button class="chip" type="button" data-slot-bet="25">25</button>
+              <button class="chip" type="button" data-slot-bet="50">50</button>
+              <button class="chip" type="button" data-slot-bet="100">100</button>
+              <button class="chip" type="button" data-slot-bet="max">MAX</button>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-wide spin-button" id="slot-spin" type="button">
+            <span>SPIN</span>
+            <kbd>SPACE</kbd>
+          </button>
+
+          <p class="microcopy slot-hint">Triple 7s wins the jackpot. Two of a kind pays too. 4% of every bet feeds the pool.</p>
+        </div>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">Paytable</h2>
+
+        <h3>Three of a kind</h3>
+        <ul class="paytable" id="paytable-three"></ul>
+
+        <h3>Two of a kind</h3>
+        <ul class="paytable" id="paytable-two"></ul>
+
+        <div class="divider"></div>
+
+        <h3>How to play</h3>
+        <p>Pick your bet (minimum 10 points), then spin. Three matching symbols pay the big multipliers. Exactly two matching symbols pay the smaller ones.</p>
+        <p>Every bet puts 4% into the jackpot. Three 7s wins the entire pool and resets it to 1,000.</p>
+
+        <p class="fine-print">
+          Symbols are weighted — 7s are rare, cherries are common. The math is tuned to a house edge so the arcade stays balanced. Play money only.
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/slots.js"></script>
+</body>
+</html>

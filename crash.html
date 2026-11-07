@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crash — watch the multiplier climb and cash out before it crashes. Play-money only.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Crash — Spectator Room</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="crash">
+  <header id="site-header"></header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">← Back to arcade</a>
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAME 03 // NERVE CHECK</p>
+        <h1>Crash</h1>
+        <p class="game-sub">The multiplier climbs from 1.00×. It can crash at any moment. Cash out before it does.</p>
+      </div>
+      <div class="game-badges">
+        <span class="badge">HOUSE EDGE <strong>3%</strong></span>
+        <span class="badge">MAX <strong>1000×</strong></span>
+      </div>
+    </header>
+
+    <div class="game-layout">
+      <section class="panel game-panel crash-panel">
+        <div class="crash-stage" id="crash-stage">
+          <canvas id="crash-canvas" aria-hidden="true"></canvas>
+
+          <div class="crash-overlay">
+            <div class="crash-multiplier" id="crash-multiplier">1.00<span>×</span></div>
+            <div class="crash-status" id="crash-status">Place a bet and launch.</div>
+          </div>
+
+          <div class="crash-history" id="crash-history" aria-label="Recent rounds"></div>
+        </div>
+
+        <div class="crash-controls">
+          <div class="bet-bar">
+            <div class="bet-field">
+              <span>BET</span>
+              <input id="crash-bet" type="number" min="10"  step="5" value="25" inputmode="numeric" aria-label="Bet amount">
+              <span class="pts">PTS</span>
+            </div>
+            <div class="bet-chips">
+              <button class="chip" type="button" data-crash-bet="10">10</button>
+              <button class="chip" type="button" data-crash-bet="25">25</button>
+              <button class="chip" type="button" data-crash-bet="50">50</button>
+              <button class="chip" type="button" data-crash-bet="100">100</button>
+              <button class="chip" type="button" data-crash-bet="max">MAX</button>
+            </div>
+          </div>
+
+          <div class="crash-buttons">
+            <button class="btn btn-primary" id="crash-start" type="button">LAUNCH</button>
+            <button class="btn btn-cashout" id="crash-cashout" type="button" disabled>CASH OUT</button>
+          </div>
+
+          <p class="microcopy">
+            Your bet is locked in when you launch. Cash out at any time after the first 0.25 seconds.
+            The house edge is built into the crash curve.
+          </p>
+        </div>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2 class="panel-title">How it works</h2>
+        <p>Set a bet and launch. The multiplier starts at <strong>1.00×</strong> and climbs in real time.</p>
+        <p>Hit <strong>cash out</strong> and your payout is <strong>bet × current multiplier</strong>. Wait too long and the round crashes, taking the bet with it.</p>
+        <p>The longer you wait, the bigger the payout — and the bigger the chance you lose everything. That is the whole game.</p>
+
+        <div class="divider"></div>
+
+        <h3>The math</h3>
+        <p>The crash point is random, with a <strong>3% house edge</strong>. There is a 3% chance of an instant crash, and the odds get thinner as the multiplier climbs.</p>
+        <p>Your best cashout multiplier is saved in your player file.</p>
+
+        <p class="fine-print">Play money only. No real gambling.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/points.js"></script>
+  <script src="js/crash.js"></script>
+</body>
+</html>
